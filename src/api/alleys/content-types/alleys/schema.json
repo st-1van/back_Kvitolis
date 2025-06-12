@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alleys_col",
+  "info": {
+    "singularName": "alleys",
+    "pluralName": "alleys-col",
+    "displayName": "Аллеї",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "alleyImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "famousPeople": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::diyachi.diyachi",
+      "mappedBy": "alley_name"
+    },
+    "tree": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::dereva.dereva",
+      "mappedBy": "alleyi"
+    }
+  }
+}

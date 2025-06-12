@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "derevas",
+  "info": {
+    "singularName": "dereva",
+    "pluralName": "derevas",
+    "displayName": "Дерева",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "alleyi": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::alleys.alleys",
+      "inversedBy": "tree"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}
