@@ -18,6 +18,9 @@
     "desc": {
       "type": "text"
     },
+    "years": {
+      "type": "string"
+    },
     "photo": {
       "type": "media",
       "multiple": false,

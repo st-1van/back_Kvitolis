@@ -386,6 +386,7 @@ export interface ApiAlleysAlleys extends Struct.CollectionTypeSchema {
   };
   attributes: {
     alleyImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    alleyName: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -400,7 +401,7 @@ export interface ApiAlleysAlleys extends Struct.CollectionTypeSchema {
       'api::alleys.alleys'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
+    priority: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String;
     tree: Schema.Attribute.Relation<'oneToOne', 'api::dereva.dereva'>;
@@ -459,7 +460,9 @@ export interface ApiDerevaDereva extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    desc: Schema.Attribute.String;
     img: Schema.Attribute.Media<'images' | 'files'>;
+    latin: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -467,6 +470,7 @@ export interface ApiDerevaDereva extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
+    price: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -506,6 +510,7 @@ export interface ApiDiyachiDiyachi extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    years: Schema.Attribute.String;
   };
 }
 

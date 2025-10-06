@@ -10,8 +10,12 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
-    "name": {
+    "alleyName": {
+      "type": "string"
+    },
+    "priority": {
       "type": "string"
     },
     "slug": {
