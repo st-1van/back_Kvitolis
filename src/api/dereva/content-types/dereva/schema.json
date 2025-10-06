@@ -13,7 +13,7 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "text"
     },
     "img": {
       "type": "media",
@@ -25,13 +25,13 @@
       ]
     },
     "latin": {
-      "type": "string"
+      "type": "text"
     },
     "price": {
-      "type": "string"
+      "type": "text"
     },
     "desc": {
-      "type": "string"
+      "type": "text"
     },
     "alleyi": {
       "type": "relation",

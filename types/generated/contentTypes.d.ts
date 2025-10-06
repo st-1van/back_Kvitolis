@@ -386,7 +386,7 @@ export interface ApiAlleysAlleys extends Struct.CollectionTypeSchema {
   };
   attributes: {
     alleyImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    alleyName: Schema.Attribute.String;
+    alleyName: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -460,17 +460,17 @@ export interface ApiDerevaDereva extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    desc: Schema.Attribute.String;
+    desc: Schema.Attribute.Text;
     img: Schema.Attribute.Media<'images' | 'files'>;
-    latin: Schema.Attribute.String;
+    latin: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::dereva.dereva'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
-    price: Schema.Attribute.String;
+    name: Schema.Attribute.Text;
+    price: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -503,8 +503,8 @@ export interface ApiDiyachiDiyachi extends Struct.CollectionTypeSchema {
       'api::diyachi.diyachi'
     > &
       Schema.Attribute.Private;
-    Mecenat: Schema.Attribute.String;
-    name: Schema.Attribute.String;
+    Mecenat: Schema.Attribute.Text;
+    name: Schema.Attribute.Text;
     photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;

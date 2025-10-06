@@ -13,7 +13,7 @@
   "pluginOptions": {},
   "attributes": {
     "alleyName": {
-      "type": "string"
+      "type": "text"
     },
     "priority": {
       "type": "string"
