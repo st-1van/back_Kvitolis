@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_btns_knopka",
+  "info": {
+    "displayName": "кнопка",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

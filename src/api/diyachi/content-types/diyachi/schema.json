@@ -26,13 +26,10 @@
       "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
-    "Free": {
+    "free": {
       "type": "boolean",
       "default": true
     },
@@ -45,7 +42,7 @@
       "target": "api::alleys.alleys",
       "inversedBy": "famousPeople"
     },
-    "Mecenat": {
+    "mecenat": {
       "type": "text"
     }
   }

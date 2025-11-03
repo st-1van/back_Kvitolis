@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_banners_baneri",
+  "info": {
+    "displayName": "Банери",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "richtext"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "gradient": {
+      "type": "enumeration",
+      "enum": [
+        "light",
+        "grey"
+      ]
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "green",
+        "fiolet"
+      ]
+    },
+    "btn": {
+      "type": "component",
+      "component": "btns.knopka",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

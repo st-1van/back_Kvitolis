@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "organizuvati_podiyus",
+  "info": {
+    "singularName": "organizuvati-podiyu",
+    "pluralName": "organizuvati-podiyus",
+    "displayName": "організувати подію"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainBanner": {
+      "type": "component",
+      "component": "banners.baneri",
+      "repeatable": false,
+      "required": true
+    },
+    "aboutTitle": {
+      "type": "string",
+      "required": true
+    },
+    "aboutDesc": {
+      "type": "richtext",
+      "required": true
+    },
+    "benefits": {
+      "type": "component",
+      "component": "festivals.perevagi",
+      "repeatable": true,
+      "required": true
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

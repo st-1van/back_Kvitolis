@@ -403,41 +403,9 @@ export interface ApiAlleysAlleys extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     priority: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
     slug: Schema.Attribute.String;
     tree: Schema.Attribute.Relation<'oneToOne', 'api::dereva.dereva'>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiBannerBanner extends Struct.CollectionTypeSchema {
-  collectionName: 'banners';
-  info: {
-    displayName: 'Banner';
-    pluralName: 'banners';
-    singularName: 'banner';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button1: Schema.Attribute.String;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    desc: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::banner.banner'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.String;
-    slug2: Schema.Attribute.String;
-    src: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -496,21 +464,130 @@ export interface ApiDiyachiDiyachi extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     date: Schema.Attribute.Date;
     desc: Schema.Attribute.Text;
-    Free: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    free: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::diyachi.diyachi'
     > &
       Schema.Attribute.Private;
-    Mecenat: Schema.Attribute.Text;
+    mecenat: Schema.Attribute.Text;
     name: Schema.Attribute.Text;
-    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    photo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     years: Schema.Attribute.String;
+  };
+}
+
+export interface ApiFestivaliFestivali extends Struct.CollectionTypeSchema {
+  collectionName: 'festivalis';
+  info: {
+    displayName: '\u0444\u0435\u0441\u0442\u0438\u0432\u0430\u043B\u0456';
+    pluralName: 'festivalis';
+    singularName: 'festivali';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    aboutDesc: Schema.Attribute.Text;
+    aboutTitle: Schema.Attribute.String;
+    benefits: Schema.Attribute.Component<'festivals.perevagi', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    dateDesc: Schema.Attribute.String;
+    dateTitle: Schema.Attribute.String;
+    gallery: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::festivali.festivali'
+    > &
+      Schema.Attribute.Private;
+    mainBanner: Schema.Attribute.Component<'banners.baneri', false>;
+    price: Schema.Attribute.Component<'festivals.price', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.String;
+    time: Schema.Attribute.Component<'festivals.chas-provedennya', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiGolovnaGolovna extends Struct.SingleTypeSchema {
+  collectionName: 'golovnas';
+  info: {
+    displayName: '\u0433\u043E\u043B\u043E\u0432\u043D\u0430';
+    pluralName: 'golovnas';
+    singularName: 'golovna';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    carousel: Schema.Attribute.Component<'banners.baneri', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::golovna.golovna'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOrganizuvatiPodiyuOrganizuvatiPodiyu
+  extends Struct.SingleTypeSchema {
+  collectionName: 'organizuvati_podiyus';
+  info: {
+    displayName: '\u043E\u0440\u0433\u0430\u043D\u0456\u0437\u0443\u0432\u0430\u0442\u0438 \u043F\u043E\u0434\u0456\u044E';
+    pluralName: 'organizuvati-podiyus';
+    singularName: 'organizuvati-podiyu';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    aboutDesc: Schema.Attribute.RichText & Schema.Attribute.Required;
+    aboutTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    benefits: Schema.Attribute.Component<'festivals.perevagi', true> &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    gallery: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::organizuvati-podiyu.organizuvati-podiyu'
+    > &
+      Schema.Attribute.Private;
+    mainBanner: Schema.Attribute.Component<'banners.baneri', false> &
+      Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1024,9 +1101,11 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::alleys.alleys': ApiAlleysAlleys;
-      'api::banner.banner': ApiBannerBanner;
       'api::dereva.dereva': ApiDerevaDereva;
       'api::diyachi.diyachi': ApiDiyachiDiyachi;
+      'api::festivali.festivali': ApiFestivaliFestivali;
+      'api::golovna.golovna': ApiGolovnaGolovna;
+      'api::organizuvati-podiyu.organizuvati-podiyu': ApiOrganizuvatiPodiyuOrganizuvatiPodiyu;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

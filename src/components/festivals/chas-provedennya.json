@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_festivals_chas_provedennya",
+  "info": {
+    "displayName": "час проведення",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

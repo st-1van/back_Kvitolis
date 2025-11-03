@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "golovnas",
+  "info": {
+    "singularName": "golovna",
+    "pluralName": "golovnas",
+    "displayName": "головна"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "carousel": {
+      "type": "component",
+      "component": "banners.baneri",
+      "repeatable": true
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

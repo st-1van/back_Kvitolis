@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "festivalis",
+  "info": {
+    "singularName": "festivali",
+    "pluralName": "festivalis",
+    "displayName": "фестивалі"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "string"
+    },
+    "mainBanner": {
+      "type": "component",
+      "component": "banners.baneri",
+      "repeatable": false
+    },
+    "aboutTitle": {
+      "type": "string"
+    },
+    "aboutDesc": {
+      "type": "text"
+    },
+    "benefits": {
+      "type": "component",
+      "component": "festivals.perevagi",
+      "repeatable": true
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "dateTitle": {
+      "type": "string"
+    },
+    "dateDesc": {
+      "type": "string"
+    },
+    "price": {
+      "type": "component",
+      "component": "festivals.price",
+      "repeatable": true
+    },
+    "time": {
+      "type": "component",
+      "component": "festivals.chas-provedennya",
+      "repeatable": true
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

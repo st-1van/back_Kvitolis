@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_festivals_prices",
+  "info": {
+    "displayName": "price"
+  },
+  "options": {},
+  "attributes": {
+    "days": {
+      "type": "string"
+    },
+    "price": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}
