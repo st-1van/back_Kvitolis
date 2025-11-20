@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mecenats_col",
+  "info": {
+    "singularName": "mecenats",
+    "pluralName": "mecenats-col",
+    "displayName": "mecenats"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "note": {
+      "type": "richtext",
+      "required": true,
+      "default": "*Історія меценатства цієї постаті буде додана найближчим часом."
+    },
+    "diyachi": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::diyachi.diyachi",
+      "mappedBy": "mecenat"
+    }
+  }
+}

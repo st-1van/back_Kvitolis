@@ -10,7 +10,7 @@ export interface BannersBaneri extends Struct.ComponentSchema {
     btn: Schema.Attribute.Component<'btns.knopka', true>;
     color: Schema.Attribute.Enumeration<['green', 'fiolet']>;
     desc: Schema.Attribute.RichText;
-    gradient: Schema.Attribute.Enumeration<['light', 'grey']>;
+    gradient: Schema.Attribute.Enumeration<['light', 'dark']>;
     photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
     title: Schema.Attribute.String;
@@ -24,8 +24,43 @@ export interface BtnsKnopka extends Struct.ComponentSchema {
     icon: 'stack';
   };
   attributes: {
-    slug: Schema.Attribute.String;
-    text: Schema.Attribute.String;
+    slug: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'#'>;
+    text: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0434\u0456\u0437\u043D\u0430\u0442\u0438\u0441\u044F \u0431\u0456\u043B\u044C\u0448\u0435'>;
+  };
+}
+
+export interface ContactsAdresse extends Struct.ComponentSchema {
+  collectionName: 'components_contacts_adresses';
+  info: {
+    displayName: 'adresse';
+  };
+  attributes: {
+    adresse: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ContactsEmail extends Struct.ComponentSchema {
+  collectionName: 'components_contacts_emails';
+  info: {
+    displayName: 'email';
+  };
+  attributes: {
+    email: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ContactsTelefoni extends Struct.ComponentSchema {
+  collectionName: 'components_contacts_telefoni';
+  info: {
+    displayName: 'phones';
+    icon: 'phone';
+  };
+  attributes: {
+    phone: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -61,6 +96,23 @@ export interface FestivalsPrice extends Struct.ComponentSchema {
   attributes: {
     days: Schema.Attribute.String;
     price: Schema.Attribute.RichText;
+  };
+}
+
+export interface OtherCard extends Struct.ComponentSchema {
+  collectionName: 'components_other_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    btn: Schema.Attribute.Component<'btns.knopka', false>;
+    desc: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 150;
+      }>;
+    photo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -133,9 +185,13 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'banners.baneri': BannersBaneri;
       'btns.knopka': BtnsKnopka;
+      'contacts.adresse': ContactsAdresse;
+      'contacts.email': ContactsEmail;
+      'contacts.telefoni': ContactsTelefoni;
       'festivals.chas-provedennya': FestivalsChasProvedennya;
       'festivals.perevagi': FestivalsPerevagi;
       'festivals.price': FestivalsPrice;
+      'other.card': OtherCard;
       'seo.seo': SeoSeo;
       'shared.open-graph': SharedOpenGraph;
       'shared.seo': SharedSeo;

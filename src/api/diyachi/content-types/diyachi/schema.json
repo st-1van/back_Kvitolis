@@ -33,9 +33,6 @@
       "type": "boolean",
       "default": true
     },
-    "date": {
-      "type": "date"
-    },
     "alley_name": {
       "type": "relation",
       "relation": "manyToOne",
@@ -43,7 +40,10 @@
       "inversedBy": "famousPeople"
     },
     "mecenat": {
-      "type": "text"
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::mecenats.mecenats",
+      "inversedBy": "diyachi"
     }
   }
 }

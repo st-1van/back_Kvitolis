@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_contacts_telefoni",
+  "info": {
+    "displayName": "phones",
+    "icon": "phone"
+  },
+  "options": {},
+  "attributes": {
+    "phone": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

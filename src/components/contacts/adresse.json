@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_contacts_adresses",
+  "info": {
+    "displayName": "adresse"
+  },
+  "options": {},
+  "attributes": {
+    "adresse": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

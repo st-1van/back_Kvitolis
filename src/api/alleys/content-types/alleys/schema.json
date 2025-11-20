@@ -13,16 +13,21 @@
   "pluginOptions": {},
   "attributes": {
     "alleyName": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "priority": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "slug": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "desc": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 28,
+      "required": true
     },
     "alleyImg": {
       "type": "media",

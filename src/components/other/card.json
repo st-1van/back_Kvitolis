@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_other_cards",
+  "info": {
+    "displayName": "card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "desc": {
+      "type": "text",
+      "maxLength": 150,
+      "required": true
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "btn": {
+      "type": "component",
+      "component": "btns.knopka",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

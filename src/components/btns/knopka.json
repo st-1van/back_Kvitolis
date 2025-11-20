@@ -7,10 +7,14 @@
   "options": {},
   "attributes": {
     "text": {
-      "type": "string"
+      "type": "string",
+      "default": "дізнатися більше",
+      "required": true
     },
     "slug": {
-      "type": "string"
+      "type": "string",
+      "default": "#",
+      "required": true
     }
   },
   "config": {}

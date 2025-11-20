@@ -27,7 +27,7 @@
       "type": "enumeration",
       "enum": [
         "light",
-        "grey"
+        "dark"
       ]
     },
     "color": {

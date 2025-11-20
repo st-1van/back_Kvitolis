@@ -4,7 +4,7 @@
   "info": {
     "singularName": "golovna",
     "pluralName": "golovnas",
-    "displayName": "головна"
+    "displayName": "Головна"
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +15,16 @@
       "type": "component",
       "component": "banners.baneri",
       "repeatable": true
+    },
+    "about": {
+      "type": "richtext",
+      "required": true
+    },
+    "card": {
+      "type": "component",
+      "component": "other.card",
+      "repeatable": true,
+      "max": 3
     },
     "seo": {
       "type": "component",
