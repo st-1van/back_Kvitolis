@@ -99,6 +99,17 @@ export interface FestivalsPrice extends Struct.ComponentSchema {
   };
 }
 
+export interface FestivalsVideo extends Struct.ComponentSchema {
+  collectionName: 'components_festivals_videos';
+  info: {
+    displayName: 'video';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    videoId: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface OtherCard extends Struct.ComponentSchema {
   collectionName: 'components_other_cards';
   info: {
@@ -191,6 +202,7 @@ declare module '@strapi/strapi' {
       'festivals.chas-provedennya': FestivalsChasProvedennya;
       'festivals.perevagi': FestivalsPerevagi;
       'festivals.price': FestivalsPrice;
+      'festivals.video': FestivalsVideo;
       'other.card': OtherCard;
       'seo.seo': SeoSeo;
       'shared.open-graph': SharedOpenGraph;

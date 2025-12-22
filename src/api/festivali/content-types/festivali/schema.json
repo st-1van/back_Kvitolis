@@ -67,6 +67,16 @@
       "type": "string",
       "default": "0",
       "required": true
+    },
+    "showPrice": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "video": {
+      "type": "component",
+      "component": "festivals.video",
+      "repeatable": false
     }
   }
 }

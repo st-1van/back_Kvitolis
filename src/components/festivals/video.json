@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_festivals_videos",
+  "info": {
+    "displayName": "video"
+  },
+  "options": {},
+  "attributes": {
+    "videoId": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "config": {}
+}
