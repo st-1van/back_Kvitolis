@@ -393,7 +393,7 @@ export interface ApiAlleysAlleys extends Struct.CollectionTypeSchema {
     desc: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 28;
+        maxLength: 250;
       }>;
     famousPeople: Schema.Attribute.Relation<
       'oneToMany',
