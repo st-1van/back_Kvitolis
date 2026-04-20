@@ -41,9 +41,9 @@
     },
     "mecenat": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::mecenats.mecenats",
-      "inversedBy": "diyachi"
+      "inversedBy": "diyachis"
     }
   }
 }

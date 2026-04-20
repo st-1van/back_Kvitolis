@@ -20,9 +20,9 @@
       "required": true,
       "default": "*Історія меценатства цієї постаті буде додана найближчим часом."
     },
-    "diyachi": {
+    "diyachis": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::diyachi.diyachi",
       "mappedBy": "mecenat"
     }

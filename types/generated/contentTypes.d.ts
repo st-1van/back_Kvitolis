@@ -474,7 +474,7 @@ export interface ApiDiyachiDiyachi extends Struct.CollectionTypeSchema {
       'api::diyachi.diyachi'
     > &
       Schema.Attribute.Private;
-    mecenat: Schema.Attribute.Relation<'oneToOne', 'api::mecenats.mecenats'>;
+    mecenat: Schema.Attribute.Relation<'manyToOne', 'api::mecenats.mecenats'>;
     name: Schema.Attribute.Text;
     photo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
@@ -586,7 +586,7 @@ export interface ApiMecenatsMecenats extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    diyachi: Schema.Attribute.Relation<'oneToOne', 'api::diyachi.diyachi'>;
+    diyachis: Schema.Attribute.Relation<'oneToMany', 'api::diyachi.diyachi'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
